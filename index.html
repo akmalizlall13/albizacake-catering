@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBIZA CAKE & CATERING | Jepara</title>
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #D2691E; /* Chocolate */
+            --light-bg: #FFF8DC; /* Cornsilk / Cream */
+            --dark-text: #3E2723;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            background-color: #fafafa;
+        }
+
+        /* Navbar Customization */
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-custom .navbar-brand {
+            color: var(--primary-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .navbar-custom .nav-link {
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 160px 0 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn-primary-custom {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-custom {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-custom:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Product Cards */
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            background-color: white;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .product-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .product-price {
+            color: var(--secondary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .bg-light-cream {
+            background-color: var(--light-bg);
+        }
+        .about-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-text);
+            color: white;
+            padding: 60px 0 20px 0;
+        }
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+        .footer-icon {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+       #text-muted, text-muted {
+            color: #FFFFF;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <i class="bi bi-shop fs-3 me-2"></i>
+                ALBIZA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk & Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Manisnya Setiap Momen Bersama Albiza</h1>
+                    <p class="hero-subtitle">Menyediakan berbagai macam kue lezat, roti hangat, dan layanan catering profesional untuk setiap acara spesial Anda di Jepara dan sekitarnya.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#products" class="btn btn-primary-custom"><i class="bi bi-basket2 me-2"></i>Lihat Menu</a>
+                        <a href="#contact" class="btn btn-outline-custom text-white border-white"><i class="bi bi-telephone me-2"></i>Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Produk & Menu Andalan</h2>
+                <p class="text-muted mb-5">Pilihan favorit pelanggan kami, dibuat dari bahan premium dan resep rahasia keluarga.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="https://i.pinimg.com/736x/e0/d8/4e/e0d84e6ead82cc17eab1e9da4f6aca4b.jpg" alt="Kue Tart" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Kue+Tart';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Kue Tart Spesial</h5>
+                            <p class="card-text text-muted small">Kue tart lembut dengan dekorasi cantik, cocok untuk ulang tahun dan perayaan.</p>
+                            <p class="product-price mt-auto mb-3">Mulai Rp 120.000</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="aset//brownis lumer.jpg" alt="Brownies" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/D2691E/FFFFFF?text=Brownies';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Brownies Lumer</h5>
+                            <p class="card-text text-muted small">Cokelat premium yang meleleh di mulut pada setiap gigitan. Best seller!</p>
+                            <p class="product-price mt-auto mb-3">Rp 65.000 / Box</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="https://i.pinimg.com/736x/19/88/b4/1988b4ebe086804c650cbb5022db7bb8.jpg" alt="Snack Box" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F4A460/FFFFFF?text=Snack+Box';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Paket Snack Box</h5>
+                            <p class="card-text text-muted small">Berisi 3-4 macam kue tradisional & modern. Cocok untuk rapat atau arisan.</p>
+                            <p class="product-price mt-auto mb-3">Mulai Rp 20.000 / Box</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="https://i.pinimg.com/736x/cc/91/13/cc91130c1337d4ca208e5dbc78b931c3.jpg" alt="Catering" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CD853F/FFFFFF?text=Catering';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Tumpengan</h5>
+                            <p class="card-text text-muted small">Layanan Tumpengan lengkap untuk syukuran, dan acara besar lainnya.</p>
+                            <p class="product-price mt-auto mb-3">Mulai Rp 250.000 / Tumpeng</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kue_kering_Idul_Fitri.JPG/1280px-Kue_kering_Idul_Fitri.JPG" alt="Kue Kering" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/DEB887/FFFFFF?text=Kue+Kering';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Kue Kering Premium</h5>
+                            <p class="card-text text-muted small">Nastar, Kastengel, Putri Salju dengan mentega wijsman. Hadir sepanjang tahun.</p>
+                            <p class="product-price mt-auto mb-3">Rp 85.000 / Toples</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="https://i.pinimg.com/originals/41/3f/77/413f77a0d57791e4bfb2255d57b3d5b5.jpg" alt="Roti Manis" class="product-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/A0522D/FFFFFF?text=Roti+Manis';">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Bolu & Roti Manis</h5>
+                            <p class="card-text text-muted small">Bolu karamel, roti sobek, dan aneka roti manis empuk freshly baked setiap hari.</p>
+                            <p class="product-price mt-auto mb-3">Mulai Rp 70.000</p>
+                            <a href="//wa.me/6289637576839" class="btn btn-primary-custom w-100"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light-cream">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    
+                    <!-- Carousel 3 Gambar Otomatis -->
+                    <div id="aboutCarousel" class="carousel slide rounded-4 shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+                        <!-- Indikator Bawah -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <div class="carousel-inner">
+                            <!-- Gambar 1: Dapur Produksi -->
+                            <div class="carousel-item active">
+                                <img src="aset/1.jpg" class="d-block w-100" alt="Dapur Produksi Higienis Standar Nasional">
+                            </div>
+                            <!-- Gambar 2: Placeholder -->
+                            <div class="carousel-item">
+                                <img src="aset/logo.jpg" class="d-block w-100" alt="Bahan Premium Albiza">
+                            </div>
+                            <!-- Gambar 3: Placeholder -->
+                            <div class="carousel-item">
+                                <img src="https://www.zalora.co.id/blog/wp-content/uploads/2026/03/image-14.png" class="d-block w-100" alt="Kue Fresh Albiza">
+                            </div>
+                        </div>
+                        
+                        <!-- Tombol Geser (Kiri/Kanan) -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Akhir Carousel -->
+
+                </div>
+                <div class="col-lg-6 px-lg-5">
+                    <h2 class="section-title text-start">Tentang Albiza</h2>
+                    <p class="mb-4">Berlokasi di hati <strong>Banyumanis, Donorojo, Jepara</strong>, ALBIZA CAKE & CATERING telah berdedikasi menyajikan aneka penganan lezat untuk berbagai keperluan masyarakat sekitar.</p>
+                    <p class="mb-4">Kami percaya bahwa setiap perayaan layak mendapatkan sajian terbaik. Oleh karena itu, kami selalu menggunakan bahan-bahan premium yang 100% Halal, higienis, dan diproses dengan penuh cinta.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-award about-icon me-3 text-warning fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Bahan Premium</h6>
+                                    <small class="text-muted">Kualitas nomor satu</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check2-circle about-icon me-3 text-success fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">100% Halal</h6>
+                                    <small class="text-muted">Aman dan terjamin</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-truck about-icon me-3 text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Layanan Antar</h6>
+                                    <small class="text-muted">Area Jepara & sekitarnya</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-heart about-icon me-3 text-danger fs-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Dibuat Fresh</h6>
+                                    <small class="text-muted">Setiap hari</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4 d-flex align-items-center">
+                        <i class="bi bi-shop me-2" style="color: white;"></i>
+                        ALBIZA
+                    </h4>
+                    <p style="color: #FFFF">Solusi tepat untuk kebutuhan kue dan hidangan catering acara spesial Anda. Menghadirkan rasa istimewa dengan harga terjangkau.</p>
+              
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <h5 style="color: #FFFF">Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-geo-alt footer-icon mt-1"></i>
+                            <span style="color: #FFFF">Jl. Raya Banyumanis rt. 02/05, Desa Banyumanis, Kec. Donorojo, Kab. Jepara, Jawa Tengah</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-telephone footer-icon"></i>
+                            <span style="color: #FFFF">+62 89637576839 (WhatsApp)</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-envelope footer-icon"></i>
+                            <span style="color: #FFFF">info@albizacake.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="text-white mb-4">Jam Operasional</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2 d-flex justify-content-between border-bottom border-secondary pb-2">
+                            <span style="color: #FFFF">Senin - Jumat</span>
+                            <span style="color: #FFFF">07:00 - 18:00 WIB</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between border-bottom border-secondary pb-2">
+                            <span style="color: #FFFF">Sabtu</span>
+                            <span style="color: #FFFF">07:00 - 16:00 WIB</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between border-bottom border-secondary pb-2">
+                            <span style="color: #FFFF">Minggu</span>
+                            <span style="color: #FFFF">08:00 - 16:00 WIB</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-12 text-center text-muted">
+                    <p style="color: #FFFF">&copy; <span id="year"></span> Albiza Cake & Catering. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Close mobile navbar on link click
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuToggle = document.getElementById('navbarNav');
+        
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                if (menuToggle.classList.contains('show')) {
+                    let bsCollapse = new bootstrap.Collapse(menuToggle);
+                    bsCollapse.toggle();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
